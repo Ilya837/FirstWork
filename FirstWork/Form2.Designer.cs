@@ -73,18 +73,22 @@ namespace FirstWork
             this.Cancel.TabIndex = 3;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // RedactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(250, 173);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.name);
             this.Controls.Add(this.New);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RedactionForm";
-            this.Text = "Form2";
+            this.Text = "Fill in form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
             this.Load += new System.EventHandler(this.RedactionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

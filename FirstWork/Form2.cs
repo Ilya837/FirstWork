@@ -12,16 +12,19 @@ namespace FirstWork
 {
     public partial class RedactionForm : Form
     {
-        public
-        RedactionForm()
+        MenuForm form = new MenuForm();
+        public  RedactionForm()
         {
             InitializeComponent();
             
         }
 
-        public void  lableSet(string name)
+        public RedactionForm(MenuForm f , string name)
         {
-            this.New.Text = name;
+            InitializeComponent();
+            this.New.Text = name ;
+            form = f;
+
         }
 
         private void RedactionForm_Load(object sender, EventArgs e)
@@ -31,7 +34,34 @@ namespace FirstWork
 
         private void OK_Click(object sender, EventArgs e)
         {
-           
+            if (this.New.Text == "New faculty name:")
+            {
+                form.Faculty.Text = this.name.Text;
+            }
+            else if (this.New.Text == "New Dean's name:")
+            {
+                form.Dean.Text = this.name.Text;
+            }
+            else
+            {
+                form.Abbreviation.Text = this.name.Text;
+            }
+            this.Close();
+            form.Enabled = true;
+            form.Focus();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            form.Enabled = true;
+            form.Focus();
+        }
+
+        private void Exit(object sender, FormClosedEventArgs e)
+        {
+            form.Enabled = true;
+            form.Focus();
         }
     }
 }

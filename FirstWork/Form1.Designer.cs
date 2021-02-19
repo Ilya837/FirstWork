@@ -117,6 +117,7 @@ namespace FirstWork
             this.File.TabIndex = 6;
             this.File.Text = "Append to File";
             this.File.UseVisualStyleBackColor = true;
+            this.File.Click += new System.EventHandler(this.File_Click);
             // 
             // label4
             // 
@@ -161,6 +162,7 @@ namespace FirstWork
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editWindowsToolStripMenuItem
             // 
@@ -184,18 +186,21 @@ namespace FirstWork
             this.deansNameToolStripMenuItem.Name = "deansNameToolStripMenuItem";
             this.deansNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.deansNameToolStripMenuItem.Text = "Dean\'s Name";
+            this.deansNameToolStripMenuItem.Click += new System.EventHandler(this.deansNameToolStripMenuItem_Click);
             // 
             // abbreviationToolStripMenuItem
             // 
             this.abbreviationToolStripMenuItem.Name = "abbreviationToolStripMenuItem";
             this.abbreviationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.abbreviationToolStripMenuItem.Text = "Abbreviation";
+            this.abbreviationToolStripMenuItem.Click += new System.EventHandler(this.abbreviationToolStripMenuItem_Click);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 242);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(389, 239);
             this.Controls.Add(this.FileName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.File);
@@ -206,9 +211,11 @@ namespace FirstWork
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuForm";
-            this.Text = "Form1";
+            this.Text = "Faculty List Creator";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -221,9 +228,6 @@ namespace FirstWork
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Faculty;
-        private System.Windows.Forms.TextBox Dean;
-        private System.Windows.Forms.TextBox Abbreviation;
         private System.Windows.Forms.Button File;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox FileName;
@@ -234,6 +238,9 @@ namespace FirstWork
         private System.Windows.Forms.ToolStripMenuItem facultyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deansNameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abbreviationToolStripMenuItem;
+        public System.Windows.Forms.TextBox Faculty;
+        public System.Windows.Forms.TextBox Dean;
+        public System.Windows.Forms.TextBox Abbreviation;
     }
 }
 

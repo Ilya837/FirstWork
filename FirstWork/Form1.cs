@@ -24,11 +24,41 @@ namespace FirstWork
 
         private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RedactionForm redact = new RedactionForm();
-            redact.lableSet("New faculty name:");
+            RedactionForm redact = new RedactionForm(this, "New faculty name:");
             redact.Show();
             this.Enabled = false;
-            this.Enabled = true;
+            
+
+        }
+
+        private void deansNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RedactionForm redact = new RedactionForm(this, "New Dean's name:");
+            redact.Show();
+            this.Enabled = false;
+            
+        }
+
+        private void abbreviationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RedactionForm redact = new RedactionForm(this, "New abbreviation:");
+            redact.Show();
+            this.Enabled = false;
+            
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void File_Click(object sender, EventArgs e)
+        {
 
         }
     }
