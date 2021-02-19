@@ -30,7 +30,7 @@ namespace FirstWork
         private void InitializeComponent()
         {
             this.New = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,13 +45,13 @@ namespace FirstWork
             this.New.TabIndex = 0;
             this.New.Text = "label1";
             // 
-            // Name
+            // name
             // 
-            this.Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Name.Location = new System.Drawing.Point(34, 74);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(195, 26);
-            this.Name.TabIndex = 1;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name.Location = new System.Drawing.Point(34, 74);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(195, 26);
+            this.name.TabIndex = 1;
             // 
             // OK
             // 
@@ -81,9 +81,9 @@ namespace FirstWork
             this.ClientSize = new System.Drawing.Size(250, 173);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.New);
-            
+            this.Name = "RedactionForm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.RedactionForm_Load);
             this.ResumeLayout(false);
@@ -94,7 +94,7 @@ namespace FirstWork
         #endregion
 
         private System.Windows.Forms.Label New;
-        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Button OK;
         private System.Windows.Forms.Button Cancel;
     }
