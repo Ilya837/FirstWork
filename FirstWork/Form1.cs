@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace FirstWork
 {
-    public partial class Form1 : Form
+    public partial class MenuForm : Form
     {
-        public Form1()
+        public MenuForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RedactionForm redact = new RedactionForm();
+            redact.lableSet("New faculty name:");
+            redact.Show();
+            this.Enabled = false;
+            this.Enabled = true;
+
         }
     }
 }
