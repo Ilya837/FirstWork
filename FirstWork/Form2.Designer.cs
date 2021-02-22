@@ -89,7 +89,6 @@ namespace FirstWork
             this.Name = "RedactionForm";
             this.Text = "Fill in form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
-            this.Load += new System.EventHandler(this.RedactionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

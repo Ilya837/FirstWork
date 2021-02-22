@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,6 @@ namespace FirstWork
         public MenuForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,11 +43,6 @@ namespace FirstWork
             
         }
 
-        private void MenuForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -59,7 +50,36 @@ namespace FirstWork
 
         private void File_Click(object sender, EventArgs e)
         {
-
+            
+            if (FileName.Text == "" || Faculty.Text == "" || Dean.Text == "" || Abbreviation.Text == "")
+            {
+                MessageBox.Show(
+                  "Информация не была записана в файл.\rПроверьте поля на заполненность",
+                   "",
+                   MessageBoxButtons.OK,
+                  MessageBoxIcon.Information,
+                  MessageBoxDefaultButton.Button1,
+                  MessageBoxOptions.DefaultDesktopOnly);               
+            }
+            else
+            {
+                
+                FileStream fileStream = new FileStream(FileName.Text, FileMode.OpenOrCreate);
+                fileStream.Seek(0, SeekOrigin.End);
+                string str = "Факультет: " + Faculty.Text + "\rДекан: " + Dean.Text + "\rАббревиатура: " + Abbreviation.Text + "\r- - - - - - - - - - - - - - - - - - - - - - -\r";
+                byte[] array = System.Text.Encoding.Default.GetBytes(str);
+                fileStream.Write(array, 0, array.Length);
+                MessageBox.Show(
+                 "Информация записана в файл",
+                  "",
+                  MessageBoxButtons.OK,
+                 MessageBoxIcon.Information,
+                 MessageBoxDefaultButton.Button1,
+                 MessageBoxOptions.DefaultDesktopOnly);
+                fileStream.Close();
+            }
+            
+            this.Focus();
         }
     }
 }

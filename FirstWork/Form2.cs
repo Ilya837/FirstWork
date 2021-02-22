@@ -27,11 +27,6 @@ namespace FirstWork
 
         }
 
-        private void RedactionForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void OK_Click(object sender, EventArgs e)
         {
             if (this.New.Text == "New faculty name:")
@@ -42,7 +37,7 @@ namespace FirstWork
             {
                 form.Dean.Text = this.name.Text;
             }
-            else
+            else if(this.New.Text == "New abbreviation:")
             {
                 form.Abbreviation.Text = this.name.Text;
             }

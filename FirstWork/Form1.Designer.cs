@@ -57,7 +57,6 @@ namespace FirstWork
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Faculty:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -160,7 +159,7 @@ namespace FirstWork
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -177,21 +176,21 @@ namespace FirstWork
             // facultyToolStripMenuItem
             // 
             this.facultyToolStripMenuItem.Name = "facultyToolStripMenuItem";
-            this.facultyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.facultyToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.facultyToolStripMenuItem.Text = "Faculty";
             this.facultyToolStripMenuItem.Click += new System.EventHandler(this.facultyToolStripMenuItem_Click);
             // 
             // deansNameToolStripMenuItem
             // 
             this.deansNameToolStripMenuItem.Name = "deansNameToolStripMenuItem";
-            this.deansNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deansNameToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.deansNameToolStripMenuItem.Text = "Dean\'s Name";
             this.deansNameToolStripMenuItem.Click += new System.EventHandler(this.deansNameToolStripMenuItem_Click);
             // 
             // abbreviationToolStripMenuItem
             // 
             this.abbreviationToolStripMenuItem.Name = "abbreviationToolStripMenuItem";
-            this.abbreviationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.abbreviationToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.abbreviationToolStripMenuItem.Text = "Abbreviation";
             this.abbreviationToolStripMenuItem.Click += new System.EventHandler(this.abbreviationToolStripMenuItem_Click);
             // 
@@ -215,7 +214,6 @@ namespace FirstWork
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuForm";
             this.Text = "Faculty List Creator";
-            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
